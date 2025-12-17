@@ -1,0 +1,17 @@
+{
+    "name": "asus/spk-pendakian-jateng",
+    "description": "Sistem pendukung keputusan pendakian gunung di Jawa Tengah.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "evanalifian",
+            "email": "evanalifian@gmal.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SPKPendakian\\": "src/"
+        }
+    },
+    "require": {}
+}
