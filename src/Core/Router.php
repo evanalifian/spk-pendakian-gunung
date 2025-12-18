@@ -3,12 +3,12 @@
 namespace SPKPendakian\Core;
 
 class Router {
-  private array $routes = [];
-  private string $path = "/";
-  private string $method;
+  private static array $routes = [];
+  private static string $path = "/";
+  private static string $method;
 
-  private function addRoute(string $method, string $path, string $controller, string $function): void {
-    $this->routes[] = [
+  private static function addRoute(string $method, string $path, string $controller, string $function): void {
+    self::$routes[] = [
       "method" => $method,
       "path" => $path,
       "controller" => $controller,
@@ -16,23 +16,23 @@ class Router {
     ];
   }
 
-  public function get(string $path, string $controller, string $function) {
-    $this->addRoute("GET", $path, $controller, $function);
+  public static function get(string $path, string $controller, string $function) {
+    self::addRoute("GET", $path, $controller, $function);
   }
 
-  public function post(string $path, string $controller, string $function) {
-    $this->addRoute("POST", $path, $controller, $function);
+  public static function post(string $path, string $controller, string $function) {
+    self::addRoute("POST", $path, $controller, $function);
   }
 
-  public function run(): void {
+  public static function run(): void {
     if (isset($_SERVER['PATH_INFO'])) {
-      $this->path = $_SERVER['PATH_INFO'];
+      self::$path = $_SERVER['PATH_INFO'];
     }
 
-    $this->method = $_SERVER['REQUEST_METHOD'];
+    self::$method = $_SERVER['REQUEST_METHOD'];
 
-    foreach ($this->routes as $route) {
-      if ($route["path"] === $this->path && $route["method"] === $this->method) {
+    foreach (self::$routes as $route) {
+      if ($route["path"] === self::$path && $route["method"] === self::$method) {
         $controller = new $route["controller"];
         $function = $route["function"];
         $controller->$function();

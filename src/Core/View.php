@@ -3,7 +3,7 @@
 namespace SPKPendakian\Core;
 
 class View {
-  static public function render(string $page, array $data = []): void {
+  public static function render(string $page, array $data = []): void {
     $data["copyright"] = date("Y");
 
     require_once __DIR__. "/../Views/layouts/header.php";

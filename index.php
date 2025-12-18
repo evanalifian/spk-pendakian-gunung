@@ -5,8 +5,8 @@ require_once __DIR__ . "/vendor/autoload.php";
 use SPKPendakian\Core\Router;
 use SPKPendakian\Controllers\HomeController;
 
-$router = new Router();
+Router::get("/", HomeController::class, "index");
+Router::get("/docs", HomeController::class, "docs");
+Router::get("/docs/reference_journal.pdf", HomeController::class, "getJournal");
 
-$router->get("/", HomeController::class, "index");
-
-$router->run();
+Router::run();

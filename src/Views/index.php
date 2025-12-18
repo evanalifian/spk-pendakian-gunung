@@ -1,11 +1,11 @@
 <div class="container d-flex flex-column row-gap-5 px-3">
   <div class="row py-5 mt-5">
-    <div class="col d-flex flex-column row-gap-2">
+    <div class="col-sm-10 d-flex flex-column row-gap-2">
       <h1 class="display-3 fw-medium"><?= $data["title"] ?></h1>
       <p class="fs-5 text-secondary"><?= $data["desc"] ?></p>
       <div class="d-flex column-gap-3">
-        <button type="button" class="btn btn-primary fw-medium">Mulai perhitungan</button>
-        <button type="button" class="btn fw-medium">Dokumentasi <i class="ri-file-line"></i></button>
+        <a href="/" class="btn btn-primary fw-medium">Mulai perhitungan</a>
+        <a href="/docs" class="btn fw-medium">Dokumentasi <i class="ri-file-line"></i></a>
       </div>
     </div>
   </div>

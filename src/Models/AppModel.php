@@ -3,9 +3,9 @@
 namespace SPKPendakian\Models;
 
 class AppModel {
-  private string $title = "SPK Pendakian Di Jawa Tengah";
-  private string $desc = "Sistem pendukung keputusan untuk menentukan pendakian gunung terbaik di Jawa Tengah menggunakan metode SAW (Simple Additive Weighting).";
-  private array $members = [
+  private static string $title = "SPK Pendakian Di Jawa Tengah";
+  private static string $desc = "Sistem pendukung keputusan untuk menentukan pendakian gunung terbaik di Jawa Tengah menggunakan metode SAW (Simple Additive Weighting).";
+  private static array $members = [
     [
       "name" => "Evan Rafa Radya Alifian",
       "role" => "Web Developer",
@@ -28,15 +28,15 @@ class AppModel {
     ],
   ];
 
-  public function getTitle(): string {
-    return $this->title;
+  public static function getTitle(): string {
+    return self::$title;
   }
 
-  public function getDesc(): string {
-    return $this->desc;
+  public static function getDesc(): string {
+    return self::$desc;
   }
 
-  public function getMembers(): array {
-    return $this->members;
+  public static function getMembers(): array {
+    return self::$members;
   }
 }
