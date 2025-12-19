@@ -10,4 +10,9 @@ class View {
     require_once __DIR__. "/../Views/$page.php";
     require_once __DIR__. "/../Views/layouts/footer.php";
   }
+
+  public static function redirect(string $path): void {
+    header("Location: $path");
+    exit;
+  }
 }
