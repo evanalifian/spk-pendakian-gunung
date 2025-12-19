@@ -3,8 +3,8 @@
     <h1 class="display-3 fw-medium"><?= $data["title"] ?></h1>
     <p class="fs-5 text-secondary"><?= $data["desc"] ?></p>
     <div class="d-flex column-gap-3">
-      <a href="/" class="btn btn-primary fw-medium">Lihat Perangkingan <i class="ri-sort-asc"></i></a>
-      <a href="/docs" class="btn fw-medium">Dokumentasi <i class="ri-file-line"></i></a>
+      <a href="/login" class="btn btn-primary fw-medium"><i class="ri-login-circle-fill"></i> Log in</a>
+      <a href="/dokumentasi" class="btn fw-medium"><i class="ri-file-line"></i> Dokumentasi</a>
     </div>
   </div>
 </div>

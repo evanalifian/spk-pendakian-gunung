@@ -1,7 +1,7 @@
-<div style="position: sticky; top: 0;" class="w-75 p-3 ms-auto">
+<div style="position: sticky; top: 48px;" class="w-75 p-3 ms-auto">
   <span class="fs-5 fw-medium">On This Page</span>
   <hr>
-  <ul class="nav d-flex flex-column justify-content-end">
+  <ul style="font-size: 14px;" class="nav d-flex flex-column justify-content-end">
     <li class="nav-item">
       <a class="d-block link-secondary link-underline link-underline-opacity-0 px-0 pb-0 pt-1" href="#dokumentasi-studi-kasus">Dokumentasi
         Studi Kasus</a>

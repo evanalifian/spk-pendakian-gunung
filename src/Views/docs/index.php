@@ -1,5 +1,5 @@
-<div class="row pt-5 mt-5">
-  <div class="col-sm-8">
+<div class="row pt-5">
+  <div class="col col-sm-8">
     <section class="mb-5">
       <h1 id="dokumentasi-studi-kasus">Dokumentasi Studi Kasus</h1>
       <p>Kami menggunakan jurnal <a href="/docs/reference_journal" download>Sistem Pendukung Keputusan Untuk Menentukan Pendakian Gunung Terbaik Di Jawa Tengah Menggunakan Metode SAW (SImple Additive Weighting)</a>, sebagai referensi untuk membuat sistem pendukung keputusan berbasis <i>website</i>.</p>
@@ -101,7 +101,7 @@
       <p>Alternatif dengan nilai preferensi terbesar merupakan alternatif terbaik.</p>
     </section>
   </div>
-  <div class="col-sm-4">
+  <div class="d-none d-sm-block col-sm-4">
     <?php require_once __DIR__ . "/table_of_content.php" ?>
   </div>
 </div>

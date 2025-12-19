@@ -11,7 +11,7 @@
       </div>
     </div>
   </footer>
-  <?php if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] === "/docs"): ?>
+  <?php if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] === "/dokumentasi"): ?>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <?php endif ?>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
