@@ -1,6 +1,11 @@
 <div style="height: 100vh;" class="row justify-content-center align-items-center">
   <div class="col-sm-5">
     <h1 class="mb-4">Sign up</h1>
+    <?php if (isset($data["error"])): ?>
+      <div class="alert alert-danger" role="alert">
+        <?= $data["error"] ?>
+      </div>
+    <?php endif ?>
     <form action="/signup" method="post">
       <div class="mb-3">
         <label for="name" class="form-label">Nama</label>
