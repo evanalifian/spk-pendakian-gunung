@@ -8,7 +8,7 @@ use SPKPendakian\Models\HomeModels;
 
 class HomeController {
   public function index(): void {
-    View::render("index", [
+    View::render("home/index", [
       "title" => AppModel::getTitle(),
       "desc" => AppModel::getDesc(),
       "members" => AppModel::getMembers()
@@ -16,7 +16,7 @@ class HomeController {
   }
 
   public function docs(): void {
-    View::render("docs", [
+    View::render("docs/index", [
       "title" => "Dokumentasi Studi Kasus",
       "desc" => "Dokumentasi studi kasus dari SPK pendakian gunung di Jawa Tengah.",
       "criterias" => HomeModels::getCriteria(),

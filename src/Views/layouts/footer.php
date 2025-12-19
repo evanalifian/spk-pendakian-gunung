@@ -1,10 +1,11 @@
+  </div>
   <footer class="mt-5 pt-5">
     <div class="container py-3 mt-5 border-top">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col">
           <p class="text-secondary">&copy; <?= $data["copyright"] ?>, All Rights Reserved.</p>
         </div>
-        <div class="col-sm-6 text-end">
+        <div class="col text-end">
           <a href="" class="link-secondary link-underline link-underline-opacity-0">Available on <i class="ri-github-fill"></i></a>
         </div>
       </div>

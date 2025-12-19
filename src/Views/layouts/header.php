@@ -11,3 +11,4 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+  <div class="container d-flex flex-column row-gap-5 px-3">
