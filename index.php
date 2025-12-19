@@ -10,5 +10,6 @@ Router::get("/", HomeController::class, "index");
 Router::get("/dokumentasi", HomeController::class, "docs");
 Router::get("/dokumentasi/reference_journal.pdf", HomeController::class, "getJournal");
 Router::get("/login", AuthController::class, "loginPage");
+Router::get("/signup", AuthController::class, "signupPage");
 
 Router::run();
