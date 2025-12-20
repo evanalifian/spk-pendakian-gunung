@@ -2,9 +2,10 @@
 
 require_once __DIR__ . "/vendor/autoload.php";
 
-use SPKPendakian\Controllers\AuthController;
 use SPKPendakian\Core\Router;
 use SPKPendakian\Controllers\HomeController;
+use SPKPendakian\Controllers\AuthController;
+use SPKPendakian\Middlewares\AuthMiddleware;
 
 Router::get("/", HomeController::class, "index");
 Router::get("/dokumentasi", HomeController::class, "docs");
