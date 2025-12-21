@@ -1,4 +1,4 @@
-<div style="position: sticky; top: 48px;" class="w-75 p-3 ms-auto">
+<div style="position: sticky; top: 96px;" class="w-75 p-3 ms-auto">
   <span class="fs-5 fw-medium">On This Page</span>
   <hr>
   <ul style="font-size: 14px;" class="nav d-flex flex-column justify-content-end">
