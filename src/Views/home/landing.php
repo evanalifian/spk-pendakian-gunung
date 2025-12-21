@@ -2,10 +2,7 @@
   <div class="col-sm-10 d-flex flex-column row-gap-2">
     <h1 class="display-3 fw-medium"><?= $data["title"] ?></h1>
     <p class="fs-5 text-secondary"><?= $data["desc"] ?></p>
-    <div class="d-flex column-gap-3">
-      <a href="/login" class="btn btn-primary fw-medium"><i class="ri-login-circle-fill"></i> Log in</a>
-      <a href="/dokumentasi" class="btn fw-medium"><i class="ri-file-line"></i> Dokumentasi</a>
-    </div>
+    <a href="/login" class="btn btn-sm btn-primary fw-medium align-self-start">Mulai perangkingan</a>
   </div>
 </div>
 <div class="row row-gap-4 py-5 mt-5">

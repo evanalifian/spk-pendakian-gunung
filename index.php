@@ -8,9 +8,9 @@ use SPKPendakian\Controllers\AuthController;
 use SPKPendakian\Middlewares\AuthMiddleware;
 use SPKPendakian\Middlewares\NotAuthMiddleware;
 
-Router::get("/", HomeController::class, "index", [NotAuthMiddleware::class]);
-Router::get("/dokumentasi", HomeController::class, "docs", [NotAuthMiddleware::class]);
-Router::get("/dokumentasi/reference_journal.pdf", HomeController::class, "getJournal", [NotAuthMiddleware::class]);
+Router::get("/", HomeController::class, "index");
+Router::get("/dokumentasi", HomeController::class, "docs");
+Router::get("/dokumentasi/reference_journal.pdf", HomeController::class, "getJournal");
 
 Router::get("/login", AuthController::class, "loginPage", [AuthMiddleware::class]);
 Router::post("/login", AuthController::class, "login", [AuthMiddleware::class]);

@@ -8,11 +8,19 @@ use SPKPendakian\Models\HomeModels;
 
 class HomeController {
   public function index(): void {
-    View::render("home/index", [
-      "title" => AppModel::getTitle(),
-      "desc" => AppModel::getDesc(),
-      "members" => AppModel::getMembers()
-    ]);
+    session_start();
+    if (isset($_SESSION["auth"])) {
+      View::render("home/ranking", [
+        "title" => "Rangking Gunung Terbaik"
+      ]);
+    } else {
+      View::render("home/landing", [
+        "title" => AppModel::getTitle(),
+        "desc" => AppModel::getDesc(),
+        "members" => AppModel::getMembers()
+      ]);
+    }
+    
   }
 
   public function docs(): void {
