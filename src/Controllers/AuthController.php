@@ -43,13 +43,32 @@ class AuthController {
     $password = $_POST["password"];
 
     try {
-      AuthValidation::loginValidate(AuthModels::getUser($username), $password);
-      echo "Login Berhasil!";
+      $userRes = AuthModels::getUser($username);
+      $userData = $userRes->fetch();
+
+      AuthValidation::isUsernameValid($userRes);
+      AuthValidation::isPasswordValid($password, $userData["password"]);
+
+      session_start();
+
+      $_SESSION["auth"] = [
+        "login" => true,
+        "username" => $userData["username"]
+      ];
+
+      View::redirect("/");
     } catch (Exception $err) {
       View::render("/auth/login", [
         "title" => "Log in | SPK Pendakian Di Jawa Tengah",
         "error" => $err->getMessage()
       ]);
     }
+  }
+
+  public function logout(): void {
+    session_start();
+    session_destroy();
+    session_unset();
+    VIew::redirect("/");
   }
 }
