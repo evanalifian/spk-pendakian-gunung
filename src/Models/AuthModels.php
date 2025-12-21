@@ -20,7 +20,10 @@ class AuthModels {
   
   public static function getUser(string $username): \PDOStatement {
     $sql = <<<SQL
-      SELECT user_username AS username,
+      SELECT
+      user_id AS id,
+      user_name AS name,
+      user_username AS username,
       user_password AS password
       FROM users
       WHERE user_username = :username;

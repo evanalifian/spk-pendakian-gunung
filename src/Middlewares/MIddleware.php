@@ -2,6 +2,6 @@
 
 namespace SPKPendakian\Middlewares;
 
-interface MIddleware {
+interface Middleware {
   public function before(): void;
 }

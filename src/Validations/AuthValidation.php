@@ -17,14 +17,15 @@ class AuthValidation {
       throw new \Exception("Username sudah tersedia!");
     }
   }
-  
-  public static function loginValidate(\PDOStatement $user, string $password): void {
-    $row = $user->rowCount();
-    $user = $user->fetch();
 
-    if ($row < 1) {
+  public static function isUsernameValid(\PDOStatement $user): void {
+    if ($user->rowCount() < 1) {
       throw new \Exception("Username tidak ditemukan!");
-    } elseif (!password_verify($password, $user["password"])) {
+    }
+  }
+
+  public static function isPasswordValid(string $password, string $hash_password): void {
+    if (!password_verify($password, $hash_password)) {
       throw new \Exception("Password tidak valid!");
     }
   }

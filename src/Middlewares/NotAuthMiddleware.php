@@ -5,11 +5,11 @@ namespace SPKPendakian\Middlewares;
 use SPKPendakian\Core\View;
 use SPKPendakian\Middlewares\Middleware;
 
-class AuthMiddleware implements Middleware {
+class NotAuthMiddleware implements Middleware {
   public function before(): void {
     session_start();
-    if (isset($_SESSION["auth"]) && $_SESSION["auth"]["login"] === true) {
-      View::redirect("/");
-    }
+    if(!isset($_SESSION["auth"])) {
+      View::redirect("/login");
+    } 
   }
 }

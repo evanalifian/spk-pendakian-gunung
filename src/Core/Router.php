@@ -34,10 +34,10 @@ class Router {
 
     foreach (self::$routes as $route) {
       if ($route["path"] === self::$path && $route["method"] === self::$method) {
+
         foreach ($route["middleware"] as $middleware) {
           $obj = new $middleware;
           $obj->before();
-          $obj->after();
         }
 
         $controller = new $route["controller"];
