@@ -4,7 +4,7 @@ namespace SPKPendakian\Models;
 
 use SPKPendakian\Config\Database;
 
-class AuthModels {
+class UserModel {
   public static function saveUser(string $name, string $username, string $password): void {
     $sql = <<<SQL
       INSERT INTO users (user_name, user_username, user_password)
@@ -18,7 +18,7 @@ class AuthModels {
     $res->execute();
   }
   
-  public static function getUser(string $username): \PDOStatement {
+  public static function getUserByUsername(string $username): \PDOStatement {
     $sql = <<<SQL
       SELECT
       user_id AS id,

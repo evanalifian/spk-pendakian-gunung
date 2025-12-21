@@ -4,7 +4,7 @@ namespace SPKPendakian\Controllers;
 
 use Exception;
 use SPKPendakian\Core\View;
-use SPKPendakian\Models\AuthModels;
+use SPKPendakian\Models\UserModel;
 use SPKPendakian\Validations\AuthValidation;
 
 class AuthController {
@@ -28,7 +28,7 @@ class AuthController {
     
     try {
       AuthValidation::isUserExist($username);
-      AuthModels::saveUser($name, $username, $hash_password);
+      UserModel::saveUser($name, $username, $hash_password);
       View::redirect("/login");
     } catch (Exception $err) {
       View::render("/auth/signup", [
@@ -43,7 +43,7 @@ class AuthController {
     $password = $_POST["password"];
 
     try {
-      $userRes = AuthModels::getUser($username);
+      $userRes = UserModel::getUserByUsername($username);
       $userData = $userRes->fetch();
 
       AuthValidation::isUsernameValid($userRes);

@@ -2,11 +2,11 @@
 
 namespace SPKPendakian\Validations;
 
-use SPKPendakian\Models\AuthModels;
+use SPKPendakian\Models\UserModel;
 
 class AuthValidation {
   public static function isUserExist(string $username): void {
-    $user = AuthModels::getUser($username);
+    $user = UserModel::getUserByUsername($username);
     $exist = false;
 
     foreach ($user as $u) {
